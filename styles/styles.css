@@ -925,3 +925,13 @@ section {
     font-size: 4rem;
   }
 }
+.responsive-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .responsive-image {
+      width: 80%;
+  }
+}
