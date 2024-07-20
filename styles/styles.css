@@ -899,6 +899,14 @@ section {
   }
 }
 @media screen and (max-width: 700px) {
+  
+  .about-container .right-about .image2 img {
+    width: 60% !important;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+    filter: grayscale(100%);
+  }
+
   .container {
     padding: 7rem 3rem;
   }
@@ -923,15 +931,5 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 4rem;
-  }
-}
-.responsive-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-@media (max-width: 600px) {
-  .responsive-image {
-      width: 60%;
   }
 }
