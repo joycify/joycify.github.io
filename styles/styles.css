@@ -932,6 +932,6 @@ section {
 }
 @media (max-width: 600px) {
   .responsive-image {
-      width: 80%;
+      width: 60%;
   }
 }
