@@ -888,8 +888,6 @@ section {
   .about-container .right-about .image2 img {
     width: 60% !important;
     object-fit: cover;
-    transition: all 0.4s ease-in-out;
-    filter: grayscale(100%);
   }
 
   .container {
