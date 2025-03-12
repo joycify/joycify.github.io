@@ -383,13 +383,14 @@ section {
   color: #5e35b1;
 }
 
-/* for adjusting subtitles smaller/lighter */
+/* for adjusting subtitles smaller/lighter (a little useless but I'll keep it for now) */
 .skill-category h5 {
   font-size: 15px;
-  font-weight: 600;
-  color: #666;
-  margin-bottom: 6px;
-  margin-top: 15px;
+  font-weight: 600; /* Semi-bold */
+  color: #444; /* Darker gray */
+  margin-bottom: 8px;
+  margin-top: 18px;
+  letter-spacing: 0.5px;
 }
 
 /* try out end */
