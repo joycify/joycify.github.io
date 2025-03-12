@@ -321,19 +321,29 @@ section {
 }
 
 /* trying out new format */
-/* Keep your section title */
+/* Section title */
 .stat-title {
   font-size: 24px;
   margin-bottom: 15px;
   font-weight: bold;
 }
 
-/* Tag container */
+/* Subcategory title (like "Programming Languages") */
+.skill-category h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Container for each row of tags */
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 15px; /* Space between categories */
+  margin-bottom: 10px; /* Less space under tags */
 }
 
 /* General tag style */
@@ -354,23 +364,32 @@ section {
 
 /* Colors for categories */
 .language {
-  background-color: #e0f7fa; /* Light blue */
+  background-color: #e0f7fa;
   color: #00796b;
 }
 
 .web {
-  background-color: #fff3e0; /* Light orange */
+  background-color: #fff3e0;
   color: #e65100;
 }
 
 .data {
-  background-color: #e8f5e9; /* Light green */
+  background-color: #e8f5e9;
   color: #2e7d32;
 }
 
 .other {
-  background-color: #ede7f6; /* Light purple */
+  background-color: #ede7f6;
   color: #5e35b1;
+}
+
+/* for adjusting subtitles smaller/lighter */
+.skill-category h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 6px;
+  margin-top: 15px;
 }
 
 /* try out end */
