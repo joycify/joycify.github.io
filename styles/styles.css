@@ -329,18 +329,44 @@ section {
 }
 
 .skills-tags span {
-  background-color: #f0f0f0; /* Light gray background */
-  color: #333; /* Dark text */
-  padding: 8px 12px;
+  padding: 8px 14px;
   border-radius: 20px;
   font-size: 14px;
   white-space: nowrap;
-  transition: background-color 0.3s ease;
+  color: #333;
+  background-color: #eee;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.skills-tags span:hover {
-  background-color: #d9d9d9; /* Slightly darker on hover */
+/* Programming Languages - Soft Blue */
+.skills-tags .lang {
+  background-color: #A7C7E7;
 }
+
+/* Data & Math - Soft Green */
+.skills-tags .data {
+  background-color: #B2D7B5;
+}
+
+/* Tools - Soft Orange */
+.skills-tags .tools {
+  background-color: #F7C59F;
+}
+
+/* Soft Skills - Light Gray */
+.skills-tags .soft {
+  background-color: #D3D3D3;
+}
+
+/* Hover effect */
+.skills-tags span:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+/* try out end */
 
 
 /*Timeline*/
