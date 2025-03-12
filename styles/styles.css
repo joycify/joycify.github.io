@@ -320,6 +320,29 @@ section {
   transform: translateX(-50%);
 }
 
+/* trying out new format */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skills-tags span {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark text */
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.skills-tags span:hover {
+  background-color: #d9d9d9; /* Slightly darker on hover */
+}
+
+
 /*Timeline*/
 .timeline {
   display: grid;
