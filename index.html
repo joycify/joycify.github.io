@@ -318,6 +318,7 @@
   }
   .project-status.live { border-color: rgba(134,239,172,0.3); color: #86efac; background: rgba(134,239,172,0.05); }
   .project-status.wip  { border-color: rgba(253,224,71,0.3); color: #fde047; background: rgba(253,224,71,0.05); }
+  .project-status.soon { border-color: rgba(147,197,253,0.3); color: #93c5fd; background: rgba(147,197,253,0.05); }
 
   /* ── CONTACT ── */
   #contact { background: var(--bg); text-align: center; overflow: hidden; }
@@ -613,8 +614,20 @@
       </div>
     </div>
     <div class="skill-group">
+      <div class="skill-group-icon">📐</div>
+      <div class="skill-group-title">Mathematics</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Probability</span>
+        <span class="skill-tag">Statistics</span>
+        <span class="skill-tag">Calculus</span>
+        <span class="skill-tag">Matrix &amp; Linear Algebra</span>
+        <span class="skill-tag">Cryptography</span>
+        <span class="skill-tag">Data Mining</span>
+      </div>
+    </div>
+    <div class="skill-group">
       <div class="skill-group-icon">📊</div>
-      <div class="skill-group-title">Data &amp; Tools</div>
+      <div class="skill-group-title">Tools</div>
       <div class="skill-tags">
         <span class="skill-tag">Power BI</span>
         <span class="skill-tag">Alteryx</span>
@@ -622,18 +635,6 @@
         <span class="skill-tag">GitHub</span>
         <span class="skill-tag">VSCode</span>
         <span class="skill-tag">IntelliJ</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-icon">✨</div>
-      <div class="skill-group-title">Other Relevant Skills</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Problem-Solving</span>
-        <span class="skill-tag">Analytical Thinking</span>
-        <span class="skill-tag">Attention to Detail</span>
-        <span class="skill-tag">Time Management</span>
-        <span class="skill-tag">Teamwork</span>
-        <span class="skill-tag">Communication</span>
       </div>
     </div>
   </div>
@@ -651,49 +652,44 @@
       <div class="project-num">Project 01</div>
       <div class="project-title">Halifax Weather Analysis</div>
       <div class="project-desc">
-        An analysis of Halifax weather data uncovering patterns and anomalies in local climate trends.
-        Combines data wrangling, statistical analysis, and visualization to tell the story behind the storms.
+        A statistical analysis of Halifax's 2024 temperature patterns and extreme weather events using Environment Canada data. Explores seasonal trends, daily temperature variation, and identifies notable hot and cold days across the year.
       </div>
       <div class="project-tags">
         <span class="project-tag">R</span>
         <span class="project-tag">Data Analysis</span>
         <span class="project-tag pink">Climatology &amp; Meteorology</span>
-        <span class="project-tag pink">Machine Learning</span>
       </div>
       <div class="project-status live">● Live</div>
     </div>
 
     <div class="project-card">
-      <div class="project-emoji">🪙</div>
+      <div class="project-emoji">🧊</div>
       <div class="project-num">Project 02</div>
+      <div class="project-title">ML Frost Forecasting System</div>
+      <div class="project-desc">
+        A machine learning project that predicts first and last frost dates in Atlantic Canada using historical climate data from Environment Canada. A hands-on exploration of time-series forecasting and climate pattern analysis.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag pink">Climatology &amp; Meteorology</span>
+        <span class="project-tag pink">Machine Learning</span>
+      </div>
+      <div class="project-status wip">◐ In Progress</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-emoji">🪙</div>
+      <div class="project-num">Project 03</div>
       <div class="project-title">FileCoin Predictor</div>
       <div class="project-desc">
-        A machine learning model in progress aimed at predicting FileCoin price trends
-        using historical data and market signals. Exploring the intersection of
-        cryptography, finance, and ML.
+        A crypto-focused project exploring FileCoin's blockchain architecture and price behavior through historical on-chain and market data. Investigating how cryptographic protocols and network activity relate to token valuation and market trends over time.
       </div>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag pink">Machine Learning</span>
         <span class="project-tag pink">Cryptography &amp; Cybersecurity</span>
       </div>
-      <div class="project-status wip">◐ In Progress</div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-emoji">🦆</div>
-      <div class="project-num">Project 03</div>
-      <div class="project-title">GooseMetrics™</div>
-      <div class="project-desc">
-        A quirky but serious data project in development. Details coming soon,
-        stay tuned for something unexpected and fun involving metrics, geese, and probably
-        a dashboard or two.
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">TBD</span>
-        <span class="project-tag pink">Stay Tuned</span>
-      </div>
-      <div class="project-status wip">◐ In Progress</div>
+      <div class="project-status soon">✦ Coming Soon</div>
     </div>
 
   </div>
