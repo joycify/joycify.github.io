@@ -42,7 +42,7 @@
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 99999;
     transform: translate(-50%, -50%);
     transition: width 0.2s, height 0.2s;
     box-shadow: 0 0 10px rgba(255,179,198,0.8), 0 0 22px rgba(255,133,161,0.45);
@@ -53,7 +53,7 @@
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
-    z-index: 9998;
+    z-index: 99998;
     transform: translate(-50%, -50%);
     transition: width 0.2s, height 0.2s;
     box-shadow: 0 0 8px rgba(255,179,198,0.15);
@@ -451,7 +451,6 @@
   <div class="timeline-wrap">
     <div class="tl-track">
 
-      <!-- INCOMING -->
       <div class="tl-item future">
         <div class="tl-dot"></div>
         <div class="tl-badge incoming">✦ incoming</div>
@@ -461,7 +460,6 @@
         <div class="tl-desc">Looking forward to getting hands-on with climate and meteorological data while making a meaningful impact!</div>
       </div>
 
-      <!-- JD IRVING -->
       <div class="tl-item current">
         <div class="tl-dot"></div>
         <div class="tl-date">Sept 2025 – Dec 2025</div>
@@ -470,7 +468,6 @@
         <div class="tl-desc">Built several dashboards for analysis and handled large datasets with care.</div>
       </div>
 
-      <!-- WOOD MACKENZIE -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">July 2025 – Aug 2025</div>
@@ -479,7 +476,6 @@
         <div class="tl-desc">Gained real-world hands-on experience through my first technical internship.</div>
       </div>
 
-      <!-- DALHOUSIE -->
       <div class="tl-item current">
         <div class="tl-dot"></div>
         <div class="tl-date">Sept 2023 – Present</div>
@@ -488,7 +484,6 @@
         <div class="tl-desc">BSc degree in progress. Making great connections and expanding my horizon across different perspectives.</div>
       </div>
 
-      <!-- PIANO TEACHER -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">Sept 2023 – Apr 2025</div>
@@ -497,7 +492,6 @@
         <div class="tl-desc">Delivered 1-on-1 private piano lessons to students aged 6–14, building patience, communication, and creative teaching skills.</div>
       </div>
 
-      <!-- MATH TUTOR -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">Sept 2023 – Apr 2025</div>
@@ -506,7 +500,6 @@
         <div class="tl-desc">Tutored middle school and high school students in core math principles, reinforcing my own foundations while helping others grow.</div>
       </div>
 
-      <!-- ISMC -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">July 2023 – Sept 2023</div>
@@ -515,7 +508,6 @@
         <div class="tl-desc">Managed all event planning and administration services for Summer 2023, from logistics to day-of coordination.</div>
       </div>
 
-      <!-- LIFEGUARD -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">June 2023 – Sept 2023</div>
@@ -524,7 +516,6 @@
         <div class="tl-desc">Ensured safety at an outdoor pool in the region during the summer season.</div>
       </div>
 
-      <!-- HIGH SCHOOL -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">Sept 2021 – June 2023</div>
@@ -729,6 +720,7 @@
   <span>© Copyright 2026 Joyce Wong</span>
 </footer>
 
+<!-- YOUR ORIGINAL CURSOR SCRIPT (untouched) -->
 <script>
   const cursor = document.getElementById('cursor');
   const ring   = document.getElementById('cursorRing');
@@ -759,5 +751,341 @@
     });
   });
 </script>
+
+
+<!-- MY CHATBOT WIDGET -->
+<style>
+.joyce-chat-widget {
+  --cb-bg:      #120e15;
+  --cb-bg2:     #16111a;
+  --cb-surface: #1e1528;
+  --cb-border:  #2e1f35;
+  --cb-pink:    #ffb3c6;
+  --cb-pink2:   #ff85a1;
+  --cb-pink3:   #ffd6e0;
+  --cb-blush:   #f4a0b5;
+  --cb-rose:    #e8547a;
+  --cb-text:    #f5e6ee;
+  --cb-muted:   #a07090;
+  --cb-font-head: 'Playfair Display', serif;
+  --cb-font-body: 'Nunito', sans-serif;
+}
+.joyce-chat-toggle {
+  position: fixed; bottom: 28px; right: 28px; z-index: 10000;
+  width: 58px; height: 58px; border-radius: 50%;
+  border: 1.5px solid rgba(255,179,198,0.3);
+  background: linear-gradient(135deg, #1e1528 0%, #120e15 100%);
+  box-shadow: 0 4px 24px rgba(255,133,161,0.2), 0 0 40px rgba(255,133,161,0.08), inset 0 1px 0 rgba(255,179,198,0.1);
+  cursor: none; display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: jcPulse 3s ease-in-out infinite;
+}
+.joyce-chat-toggle:hover {
+  transform: scale(1.08) translateY(-2px); border-color: rgba(255,179,198,0.6);
+  box-shadow: 0 8px 32px rgba(255,133,161,0.35), 0 0 50px rgba(255,133,161,0.12), inset 0 1px 0 rgba(255,179,198,0.15);
+}
+.joyce-chat-toggle.open { animation: none; border-color: rgba(255,133,161,0.5); }
+.joyce-chat-toggle svg { transition: all 0.3s; }
+.joyce-chat-toggle.open .jc-icon-open { display: none; }
+.joyce-chat-toggle.open .jc-icon-close { display: block; }
+.joyce-chat-toggle .jc-icon-close { display: none; }
+@keyframes jcPulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(255,133,161,0.2), 0 0 40px rgba(255,133,161,0.08); }
+  50% { box-shadow: 0 4px 30px rgba(255,133,161,0.3), 0 0 55px rgba(255,133,161,0.14); }
+}
+.joyce-chat-window {
+  position: fixed; bottom: 100px; right: 28px; z-index: 9999;
+  width: 370px; max-height: 560px; border-radius: 22px;
+  border: 1px solid rgba(255,179,198,0.12); background: var(--cb-bg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(255,133,161,0.06), inset 0 1px 0 rgba(255,179,198,0.06);
+  display: flex; flex-direction: column; overflow: hidden;
+  opacity: 0; transform: translateY(16px) scale(0.96); pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--cb-font-body);
+}
+.joyce-chat-window.visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
+.joyce-chat-header {
+  padding: 1.1rem 1.3rem; background: var(--cb-bg2);
+  border-bottom: 1px solid rgba(255,179,198,0.08);
+  display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+}
+.joyce-chat-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--cb-pink2), var(--cb-rose));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.05rem; box-shadow: 0 2px 12px rgba(255,133,161,0.25); flex-shrink: 0;
+}
+.joyce-chat-header-info { flex: 1; }
+.joyce-chat-header-name {
+  font-family: var(--cb-font-head); font-weight: 700; font-size: 0.92rem;
+  color: var(--cb-text); line-height: 1.2;
+}
+.joyce-chat-header-name em { font-style: italic; color: var(--cb-pink); }
+.joyce-chat-header-sub {
+  font-size: 0.66rem; color: var(--cb-muted);
+  display: flex; align-items: center; gap: 0.35rem; margin-top: 0.2rem;
+}
+.jc-status-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #86efac;
+  box-shadow: 0 0 6px rgba(134,239,172,0.5); animation: jcDotPulse 2s ease-in-out infinite;
+}
+@keyframes jcDotPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.joyce-chat-messages {
+  flex: 1; overflow-y: auto; padding: 1.2rem;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  min-height: 200px; max-height: 300px;
+  scrollbar-width: thin; scrollbar-color: rgba(255,179,198,0.2) transparent;
+}
+.joyce-chat-messages::-webkit-scrollbar { width: 3px; }
+.joyce-chat-messages::-webkit-scrollbar-track { background: transparent; }
+.joyce-chat-messages::-webkit-scrollbar-thumb { background: rgba(255,179,198,0.25); border-radius: 3px; }
+.jc-msg {
+  max-width: 85%; padding: 0.65rem 0.95rem; border-radius: 16px;
+  font-size: 0.82rem; line-height: 1.65; animation: jcMsgIn 0.3s ease-out; word-wrap: break-word;
+}
+@keyframes jcMsgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.jc-msg.bot {
+  align-self: flex-start; background: var(--cb-surface);
+  border: 1px solid var(--cb-border); color: var(--cb-text); border-bottom-left-radius: 4px;
+}
+.jc-msg.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, rgba(255,133,161,0.15), rgba(232,84,122,0.12));
+  border: 1px solid rgba(255,179,198,0.2); color: var(--cb-pink3); border-bottom-right-radius: 4px;
+}
+.jc-typing {
+  align-self: flex-start; display: none; gap: 4px;
+  padding: 0.65rem 0.95rem; background: var(--cb-surface);
+  border: 1px solid var(--cb-border); border-radius: 16px;
+  border-bottom-left-radius: 4px; margin: 0 1.2rem;
+}
+.jc-typing.active { display: flex; }
+.jc-typing-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--cb-pink);
+  opacity: 0.4; animation: jcBounce 1.2s ease-in-out infinite;
+}
+.jc-typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.jc-typing-dot:nth-child(3) { animation-delay: 0.3s; }
+@keyframes jcBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+.jc-starters { padding: 0 1.2rem 0.5rem; display: flex; flex-direction: column; gap: 0.35rem; flex-shrink: 0; }
+.jc-starters-label {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--cb-muted); margin-bottom: 0.1rem;
+}
+.jc-starter-btn {
+  display: block; width: 100%; text-align: left; padding: 0.45rem 0.8rem;
+  background: rgba(255,179,198,0.04); border: 1px solid rgba(255,179,198,0.12);
+  border-radius: 12px; color: var(--cb-pink3); font-family: var(--cb-font-body);
+  font-size: 0.74rem; font-weight: 600; cursor: none; transition: all 0.2s; line-height: 1.4;
+}
+.jc-starter-btn:hover {
+  background: rgba(255,179,198,0.1); border-color: rgba(255,179,198,0.3);
+  color: var(--cb-pink); transform: translateX(3px);
+}
+.jc-input-area {
+  padding: 0.75rem 1rem; border-top: 1px solid rgba(255,179,198,0.08);
+  background: var(--cb-bg2); display: flex; gap: 0.6rem; align-items: center; flex-shrink: 0;
+}
+.jc-input {
+  flex: 1; background: var(--cb-surface); border: 1px solid var(--cb-border);
+  border-radius: 14px; padding: 0.6rem 1rem; color: var(--cb-text);
+  font-family: var(--cb-font-body); font-size: 0.82rem; outline: none;
+  transition: border-color 0.2s; cursor: none;
+}
+.jc-input::placeholder { color: var(--cb-muted); opacity: 0.7; }
+.jc-input:focus { border-color: rgba(255,179,198,0.35); }
+.jc-input:disabled { opacity: 0.5; }
+.jc-send {
+  width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: linear-gradient(135deg, var(--cb-pink2), var(--cb-rose));
+  display: flex; align-items: center; justify-content: center; cursor: none;
+  transition: all 0.2s; box-shadow: 0 2px 10px rgba(255,133,161,0.25); flex-shrink: 0;
+}
+.jc-send:hover { transform: scale(1.08); box-shadow: 0 4px 16px rgba(255,133,161,0.4); }
+.jc-send:active { transform: scale(0.95); }
+.jc-send:disabled { opacity: 0.4; pointer-events: none; }
+.jc-send svg { width: 16px; height: 16px; fill: white; transform: translateX(1px); }
+.jc-brand { text-align: center; padding: 0.35rem; font-size: 0.58rem; color: var(--cb-muted); opacity: 0.45; background: var(--cb-bg2); }
+.jc-limit-banner {
+  display: none; padding: 0.75rem 1rem; background: rgba(255,133,161,0.06);
+  border-top: 1px solid rgba(255,179,198,0.1); text-align: center;
+  font-size: 0.75rem; color: var(--cb-blush); line-height: 1.6;
+}
+.jc-limit-banner a { color: var(--cb-pink); text-decoration: none; font-weight: 700; }
+.jc-limit-banner a:hover { text-decoration: underline; }
+@media (max-width: 480px) {
+  .joyce-chat-window { right: 12px; left: 12px; bottom: 90px; width: auto; max-height: 70vh; }
+  .joyce-chat-toggle { bottom: 18px; right: 18px; }
+}
+</style>
+
+<div class="joyce-chat-widget">
+  <button class="joyce-chat-toggle" id="jcToggle" aria-label="Chat with Joyce's AI assistant">
+    <svg class="jc-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffb3c6" stroke-width="1.8">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      <circle cx="9" cy="12" r="0.7" fill="#ffb3c6"/><circle cx="12" cy="12" r="0.7" fill="#ffb3c6"/><circle cx="15" cy="12" r="0.7" fill="#ffb3c6"/>
+    </svg>
+    <svg class="jc-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb3c6" stroke-width="2" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <div class="joyce-chat-window" id="jcWindow">
+    <div class="joyce-chat-header">
+      <div class="joyce-chat-avatar">🌸</div>
+      <div class="joyce-chat-header-info">
+        <div class="joyce-chat-header-name">Joyce's personal <em>AI assistant</em> ✦</div>
+        <div class="joyce-chat-header-sub"><span class="jc-status-dot"></span> always here to share about Joyce</div>
+      </div>
+    </div>
+    <div class="joyce-chat-messages" id="jcMessages">
+      <div class="jc-msg bot">Hey there! 🌸 I'm Joyce's personal AI assistant. Ask me anything about her — her journey, skills, projects, or interests. I'd love to help!</div>
+    </div>
+    <div class="jc-typing" id="jcTyping"><div class="jc-typing-dot"></div><div class="jc-typing-dot"></div><div class="jc-typing-dot"></div></div>
+    <div class="jc-starters" id="jcStarters">
+      <div class="jc-starters-label">✦ try asking</div>
+      <button class="jc-starter-btn" data-q="What is Joyce studying?">🎓 What is Joyce studying?</button>
+      <button class="jc-starter-btn" data-q="Tell me about her work experience">💼 Tell me about her work experience</button>
+      <button class="jc-starter-btn" data-q="What projects has she worked on?">🌦️ What projects has she worked on?</button>
+      <button class="jc-starter-btn" data-q="What are her interests?">⛈️ What are her interests?</button>
+    </div>
+    <div class="jc-limit-banner" id="jcLimit">You've reached the message limit for this chat 🌸<br>Want to keep the conversation going? <a href="mailto:joyce.wong@dal.ca">Email Joyce directly!</a></div>
+    <div class="jc-input-area" id="jcInputArea">
+      <input type="text" class="jc-input" id="jcInput" placeholder="Ask about Joyce..." autocomplete="off"/>
+      <button class="jc-send" id="jcSend" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+    </div>
+    <div class="jc-brand">✦ joyce's personal AI assistant</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const MAX_MESSAGES = 10;
+  let msgCount = 0;
+  const toggle = document.getElementById('jcToggle');
+  const chatWin = document.getElementById('jcWindow');
+  const msgArea = document.getElementById('jcMessages');
+  const input = document.getElementById('jcInput');
+  const sendBtn = document.getElementById('jcSend');
+  const typing = document.getElementById('jcTyping');
+  const starters = document.getElementById('jcStarters');
+  const limitBan = document.getElementById('jcLimit');
+  const inputArea = document.getElementById('jcInputArea');
+
+  const knowledge = [
+    { keys: ['study','studying','major','minor','degree','program','university','dalhousie','dal','school','academic'], responses: ["Joyce is a third-year BSc Co-op student at Dalhousie University in Halifax! 🎓 She's majoring in Mathematics (Applied Math Concentration) with a minor in Computer Science. She also received an Entrance Award with a Renewable Scholarship — super proud moment! ✦","Great question! Joyce studies at Dalhousie University 🎓 — she's doing a BSc Co-op with a major in Applied Mathematics and a minor in Computer Science. Currently in her third year and loving it! ✦"] },
+    { keys: ['course','coursework','class','classes','subject','taking'], responses: ["Joyce has taken some really cool courses! 📚 On the math side: Cryptography, Calculus I–III, Data Mining with R, Matrix Theory & Linear Algebra, and Probability & Statistics. For CS: Data Structures & Algorithms, Discrete Math, Information Security, and Software Development. She's also taking atmospheric science courses like Synoptic Meteorology and Atmospheric Dynamics! ✦","She's got a packed schedule! 📚 Math courses include Cryptography, Calculus, Linear Algebra, and Data Mining. CS courses include Data Structures, Discrete Math, and Info Security. Plus she's taking atmospheric science courses too — Synoptic Meteorology, Atmospheric Dynamics, and more! ✦"] },
+    { keys: ['experience','work','job','intern','internship','career','employ','professional'], responses: ["Joyce has had a super diverse journey! 💼 She interned at Wood Mackenzie as a Data Analyst (Summer 2025), then at J.D. Irving as a Financial Data Analyst (Fall 2025) building dashboards. Before tech, she taught piano, tutored math, coordinated events, and even lifeguarded! Plus she's got an incoming role at Environment and Climate Change Canada starting May 2026 🌿","Where do I even start! 💼 Joyce has done data analyst internships at Wood Mackenzie and J.D. Irving, taught private piano lessons, tutored math, coordinated events at ISMC Canada, and worked as a lifeguard for HRM. She's also got an exciting incoming position at ECCC for 2026! Talk about range ✦"] },
+    { keys: ['eccc','environment canada','climate change canada','climatology assistant','incoming','future','next','upcoming','2026'], responses: ["Exciting news — Joyce has an incoming role as a Climatology Assistant at Environment and Climate Change Canada (ECCC) starting May 2026! 🌿 She's really looking forward to getting hands-on with climate and meteorological data. ✦","Joyce is joining Environment and Climate Change Canada as a Climatology Assistant in May 2026! 🌿 It's a dream opportunity that combines her love for atmospheric science with real-world impact. She can't wait! ✦"] },
+    { keys: ['irving','jdi','j.d. irving','financial data'], responses: ["At J.D. Irving (Fall 2025), Joyce worked as a Financial Data Analyst Intern! 📊 She built several dashboards for analysis and worked with large datasets. A great experience combining her analytical skills with real business data! ✦"] },
+    { keys: ['wood mackenzie','woodmac'], responses: ["Joyce interned at Wood Mackenzie in Summer 2025 as a Data Analyst! 📈 It was her first technical internship where she gained real-world hands-on experience. A great stepping stone! ✦"] },
+    { keys: ['project','built','build','portfolio','worked on','created'], responses: ["Joyce has some awesome projects! 🌦️ Her Halifax Weather Analysis (live!) uses R to explore 2024 temperature patterns. She's building an ML Frost Forecasting System in Python to predict frost dates in Atlantic Canada. And coming soon — a FileCoin Predictor exploring blockchain price behavior! ✦","Three cool projects to share! Her Halifax Weather Analysis is live and built with R. She's currently working on an ML Frost Forecasting System in Python. And coming up next is a FileCoin Predictor that blends crypto and machine learning! 🌦️🧊🪙"] },
+    { keys: ['weather','halifax weather','temperature','climate data','weather analysis'], responses: ["Joyce's Halifax Weather Analysis project is live! 🌦️ It's a statistical deep-dive into Halifax's 2024 temperature patterns and extreme weather events using Environment Canada data. Seasonal trends, daily variations, hot days, cold days — all built with R! ✦"] },
+    { keys: ['frost','forecast','ml project','machine learning project','predict frost'], responses: ["The ML Frost Forecasting System is one of Joyce's current projects! 🧊 She's using Python and machine learning to predict first and last frost dates in Atlantic Canada from historical climate data. A cool blend of her climatology and ML interests! ✦"] },
+    { keys: ['filecoin','crypto','blockchain','coin','token'], responses: ["Joyce has an upcoming project called the FileCoin Predictor! 🪙 It'll explore FileCoin's blockchain architecture and price behavior through on-chain and market data — investigating how cryptographic protocols relate to token valuation. Coming soon! ✦"] },
+    { keys: ['skill','tech','technology','tool','programming','language','code','coding','stack','toolkit'], responses: ["Joyce has a great toolkit! ⌨️ She codes in R, Python, Java, and SQL. For web she knows HTML, CSS, JavaScript, and Git. Math skills include probability, statistics, calculus, linear algebra, cryptography, and data mining. Tools: Power BI, Alteryx, RStudio, GitHub, VSCode, IntelliJ! ✦","Her tech stack is solid! ⌨️ Programming: R, Python, Java, SQL. Web dev: HTML, CSS, JS, Git. She's also proficient with Power BI, Alteryx, RStudio, and various IDEs. Plus a deep mathematical foundation in stats, linear algebra, and cryptography! ✦"] },
+    { keys: ['python'], responses: ["Yes! Joyce uses Python 🐍 for her ML Frost Forecasting System and the upcoming FileCoin Predictor. It's one of her go-to languages for data and machine learning work! ✦"] },
+    { keys: ['interest','passion','into','focus area','domain','passionate'], responses: ["Joyce has three main passions! ⛈️ Climatology & Meteorology — she's fascinated by weather and climate systems. 🤖 Machine Learning — she loves exploring how data makes predictions. 🔐 Cryptography & Cybersecurity — the math behind security excites her. Such a cool combo! ✦","Her three focus areas are really unique together! ⛈️ Climatology & Meteorology, 🤖 Machine Learning, and 🔐 Cryptography & Cybersecurity. It's the intersection of these that makes Joyce's profile so interesting! ✦"] },
+    { keys: ['meteorolog','weather interest','atmospheric','climate interest','climatolog'], responses: ["Joyce is super into climatology and meteorology! ⛈️ She's taking courses in Atmospheric Science, Atmospheric Physics, Synoptic Meteorology, and Atmospheric Dynamics. Her incoming ECCC role and weather projects show just how passionate she is! ✦"] },
+    { keys: ['cryptograph','security','cyber','encrypt','information security'], responses: ["Cryptography and cybersecurity are one of Joyce's key interests! 🔐 She's taking courses in Cryptography and Information Security at Dalhousie. The mathematical side of security really fascinates her — it's where math meets CS perfectly! ✦"] },
+    { keys: ['machine learning','ml','ai','artificial intelligence','deep learning'], responses: ["Joyce loves machine learning! 🤖 She's applying it to real-world problems — her Frost Forecasting System uses ML to predict frost dates, and the FileCoin Predictor will use ML for price analysis. She combines it with her strong math foundation in statistics and linear algebra! ✦"] },
+    { keys: ['piano','music','teach piano','instrument'], responses: ["Fun fact — Joyce is a pianist! 🎹 She taught private 1-on-1 piano lessons to students aged 6–14 from 2023 to 2025. It really built her patience, communication, and creative teaching skills. Such a talented person! ✦"] },
+    { keys: ['tutor','tutoring','math tutor','teaching'], responses: ["Joyce tutored middle and high school students in math from 2023 to 2025! 📐 It reinforced her own foundations while helping others grow. Combined with her piano teaching, she's got amazing communication and mentoring skills! ✦"] },
+    { keys: ['contact','reach','email','connect','hire','message','talk to','get in touch'], responses: ["You can reach Joyce through several channels! 💌 Email: joyce.wong@dal.ca · GitHub: github.com/joycify · LinkedIn: linkedin.com/in/joyce-whw. She loves meeting new people, so don't hesitate! 🌸","Joyce would love to hear from you! 💌 Drop her an email at joyce.wong@dal.ca, connect on LinkedIn at linkedin.com/in/joyce-whw, or check her GitHub at github.com/joycify! 🌸"] },
+    { keys: ['github','git','repo','repository'], responses: ["Find Joyce on GitHub at github.com/joycify! 💻 Check out her repos to see her projects and code. ✦"] },
+    { keys: ['linkedin'], responses: ["Joyce is on LinkedIn at linkedin.com/in/joyce-whw! 💼 She's always open to new connections — feel free to reach out! 🌸"] },
+    { keys: ['french','laval','quebec','langue','immersion'], responses: ["Joyce spent a summer immersed in French language and culture at Université Laval in Québec City! 🗼 It was a super enriching experience that broadened her cultural perspective. What a cool adventure! ✦"] },
+    { keys: ['high school','diploma','graduate','honor','principal','graduation'], responses: ["Joyce graduated high school in June 2023 with Honors and Principal's List distinction! 🏫 She also received an Entrance Award from Dalhousie University with a Renewable Scholarship. Impressive! ✦"] },
+    { keys: ['lifeguard','swim','pool','hrm'], responses: ["Joyce worked as an Assistant Lifeguard for Halifax Regional Municipality during Summer 2023! 🏊 She ensured safety at an outdoor pool. Talk about a diverse resume! ✦"] },
+    { keys: ['event','coordinator','ismc','church','faith city'], responses: ["During Summer 2023, Joyce was an Event Coordinator at ISMC Canada and Faith City Church! 🎉 She managed all event planning and administration from logistics to day-of coordination. ✦"] },
+    { keys: ['who is','about joyce','tell me about','who are you','herself','introduce','bio','background','overview'], responses: ["Joyce Wong is a third-year BSc Co-op student at Dalhousie University in Halifax, majoring in Mathematics with a minor in Computer Science! 🌸 She's passionate about climatology, machine learning, and cryptography. From lifeguarding to data analysis to teaching piano — she's always exploring new paths. She's got an exciting incoming role at Environment and Climate Change Canada too! ✦","Meet Joyce! 🌸 She's a math & CS student at Dalhousie University with a beautifully diverse background — data analyst, piano teacher, lifeguard, event coordinator, and more. Her passions lie at the intersection of climate science, ML, and cybersecurity. Currently in her third year and thriving! ✦"] },
+    { keys: ['hello','hey','hi','sup','howdy','good morning','good afternoon','good evening','hii','heyy'], responses: ["Hey there! 🌸 So nice of you to say hi! I'm here to tell you all about Joyce — her journey, skills, projects, interests, you name it. What would you like to know? ✦","Hi friend! 💛 Welcome to Joyce's corner. I'm her personal AI assistant and I'd love to chat about her work, studies, or anything else. What are you curious about? ✦"] },
+    { keys: ['thank','thanks','thx','ty','appreciate'], responses: ["Aww you're so welcome! 💛 If you have more questions about Joyce, I'm always here. Feel free to connect with her at joyce.wong@dal.ca! 🌸","Happy to help! 🌸 Don't hesitate to ask more or reach out to Joyce directly — she'd love to hear from you! ✦"] },
+    { keys: ['bye','goodbye','see ya','later','cya','gotta go','leaving'], responses: ["Thanks for stopping by! 🌸 It was lovely chatting with you. Come back anytime! Have an amazing day ✦💛","Bye bye! 💛 So glad you visited. Feel free to pop in anytime you want to learn more about Joyce. Take care! 🌸"] },
+    { keys: ['fun fact','interesting fact','random','something cool','unique','special','surprise'], responses: ["Here's something cool! 🌟 Joyce has taught piano to kids as young as 6, worked as a lifeguard, learned French in Québec City, and is about to work with real climate data at ECCC — talk about range! ✦","Fun fact: Joyce's interests span from atmospheric dynamics to blockchain cryptography! 🌟 Plus she plays piano, speaks some French, and has lifeguarding skills. She's truly a renaissance woman! ✦"] },
+    { keys: ['hobby','hobbies','free time','outside class','for fun'], responses: ["Beyond academics, Joyce plays piano and has had such diverse experiences — teaching music, tutoring math, lifeguarding, event planning! 🎹 Her curiosity really knows no bounds. She's someone who's always looking for new ways to grow! ✦"] },
+    { keys: ['where','location','city','live','based','halifax','nova scotia','canada'], responses: ["Joyce is based in Halifax, Nova Scotia! 🌊 She studies at Dalhousie University there. She also spent a summer in Québec City for French immersion at Université Laval. ✦"] },
+    { keys: ['data analyst','data analysis','power bi','alteryx','dashboard','dataset'], responses: ["Joyce has solid data analysis chops! 📊 She interned at both Wood Mackenzie and J.D. Irving as a Data Analyst, building dashboards and wrangling large datasets. She's skilled in Power BI, Alteryx, R, Python, and SQL! ✦"] },
+    { keys: ['math','mathematics','applied math','calculus','algebra','linear algebra','stats','statistics','probability'], responses: ["Math is at the core of everything Joyce does! 📐 She's majoring in Applied Mathematics at Dalhousie. Coursework includes Calculus I–III, Linear Algebra, Probability & Statistics, Cryptography, and Data Mining. She's got a beautiful mathematical mind! ✦"] },
+    { keys: ['scholarship','award','achievement','accomplishment','recognition'], responses: ["Joyce has some wonderful achievements! 🏆 Entrance Award with Renewable Scholarship from Dalhousie, and graduated high school with Honors and Principal's List. She also spent a summer doing French immersion at Université Laval in Québec City! ✦"] },
+    { keys: ['r studio','rstudio','r language','r programming'], responses: ["Joyce uses R and RStudio extensively! 📊 Her Halifax Weather Analysis was built with R, and she's taken a Data Mining with R course. It's one of her core analytical tools! ✦"] },
+    { keys: ['java'], responses: ["Yes! Joyce codes in Java ☕ and uses IntelliJ as her development environment. It's part of her well-rounded programming skill set! ✦"] },
+    { keys: ['sql','database','query'], responses: ["Joyce works with SQL as part of her data toolkit! 🗄️ Combined with Power BI and Alteryx, she's well-equipped for data management and analysis. ✦"] },
+    { keys: ['web','html','css','javascript','website','site','frontend'], responses: ["Joyce knows web development too! 🌐 She's skilled in HTML, CSS, JavaScript, and Git. The beautiful website you're browsing right now is a testament to that! ✦"] },
+    { keys: ['resume','cv','hire','opportunity','recruit','position'], responses: ["Interested in working with Joyce? 💼 She'd love to connect! Reach out via email at joyce.wong@dal.ca or on LinkedIn at linkedin.com/in/joyce-whw. She's always open to new opportunities! 🌸"] }
+  ];
+
+  const fallbacks = [
+    "Hmm, I'm not sure about that one! 🌸 I'm best at answering questions about Joyce — her education, work, skills, or projects. Try asking about one of those!",
+    "That's a great question, but I'm here specifically for all things Joyce! 💛 Ask about her journey, studies, or cool projects — I've got lots to share! ✦",
+    "I wish I could help with that, but I'm Joyce's dedicated assistant! 🌸 I know everything about her background, skills, and projects though. What would you like to know?",
+    "Ooh, that's outside my area! I'm here to share about Joyce Wong 💛 Try asking about her experience, interests, or what she's building — I'll have a great answer! ✦"
+  ];
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  function getResponse(text) {
+    const lower = text.toLowerCase().replace(/[^\w\s]/g, '');
+    let bestMatch = null, bestScore = 0;
+    for (const entry of knowledge) {
+      let score = 0;
+      for (const key of entry.keys) { if (lower.includes(key.toLowerCase())) score += key.length; }
+      if (score > bestScore) { bestScore = score; bestMatch = entry; }
+    }
+    if (bestScore >= 2 && bestMatch) return pick(bestMatch.responses);
+    return pick(fallbacks);
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = chatWin.classList.toggle('visible');
+    toggle.classList.toggle('open', isOpen);
+    if (isOpen) setTimeout(() => input.focus(), 350);
+  });
+
+  function sendMessage(text) {
+    if (!text.trim() || msgCount >= MAX_MESSAGES) return;
+    if (starters.style.display !== 'none') starters.style.display = 'none';
+    addMsg(text, 'user'); input.value = ''; msgCount++;
+    typing.classList.add('active'); scrollDown();
+    const delay = 450 + Math.random() * 650;
+    setTimeout(() => {
+      typing.classList.remove('active');
+      addMsg(getResponse(text), 'bot');
+      if (msgCount >= MAX_MESSAGES) { limitBan.style.display = 'block'; inputArea.style.display = 'none'; }
+    }, delay);
+  }
+
+  function addMsg(text, type) {
+    const div = document.createElement('div');
+    div.className = 'jc-msg ' + type; div.textContent = text;
+    msgArea.appendChild(div); scrollDown();
+  }
+
+  function scrollDown() { requestAnimationFrame(() => { msgArea.scrollTop = msgArea.scrollHeight; }); }
+
+  sendBtn.addEventListener('click', () => sendMessage(input.value));
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(input.value); });
+  document.querySelectorAll('.jc-starter-btn').forEach(btn => {
+    btn.addEventListener('click', () => sendMessage(btn.getAttribute('data-q')));
+  });
+
+  document.querySelectorAll('.joyce-chat-toggle, .jc-starter-btn, .jc-send, .jc-input').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      const c = document.getElementById('cursor'), r = document.getElementById('cursorRing');
+      if (c) { c.style.width = '22px'; c.style.height = '22px'; }
+      if (r) { r.style.width = '52px'; r.style.height = '52px'; }
+    });
+    el.addEventListener('mouseleave', () => {
+      const c = document.getElementById('cursor'), r = document.getElementById('cursorRing');
+      if (c) { c.style.width = '14px'; c.style.height = '14px'; }
+      if (r) { r.style.width = '40px'; r.style.height = '40px'; }
+    });
+  });
+})();
+</script>
+<!-- END OF CHATBOT WIDGET -->
+
 </body>
 </html>
