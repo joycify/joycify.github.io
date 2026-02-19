@@ -753,7 +753,7 @@
 </script>
 
 
-<!-- MY CHATBOT WIDGET -->
+<!-- MY BOT WIDGET -->
 <style>
 .joyce-chat-widget {
   --cb-bg:      #120e15;
@@ -778,7 +778,7 @@
   box-shadow: 0 4px 24px rgba(255,133,161,0.2), 0 0 40px rgba(255,133,161,0.08), inset 0 1px 0 rgba(255,179,198,0.1);
   cursor: none; display: flex; align-items: center; justify-content: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: jcPulse 3s ease-in-out infinite;
+  opacity: 0;
 }
 .joyce-chat-toggle:hover {
   transform: scale(1.08) translateY(-2px); border-color: rgba(255,179,198,0.6);
@@ -792,6 +792,49 @@
 @keyframes jcPulse {
   0%, 100% { box-shadow: 0 4px 24px rgba(255,133,161,0.2), 0 0 40px rgba(255,133,161,0.08); }
   50% { box-shadow: 0 4px 30px rgba(255,133,161,0.3), 0 0 55px rgba(255,133,161,0.14); }
+}
+/* BOUNCE ON LOAD */
+@keyframes jcBounceIn {
+  0%   { transform: scale(0) translateY(20px); opacity: 0; }
+  50%  { transform: scale(1.15) translateY(-4px); opacity: 1; }
+  70%  { transform: scale(0.95) translateY(1px); }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.joyce-chat-toggle.bounce-in {
+  animation: jcBounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, jcPulse 3s ease-in-out 1.5s infinite;
+}
+/* NOTIFICATION BADGE */
+.jc-notif-badge {
+  position: absolute; top: -2px; right: -2px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--cb-rose); border: 2px solid #120e15;
+  box-shadow: 0 0 8px rgba(232,84,122,0.6);
+  animation: jcBadgePulse 2s ease-in-out infinite;
+  pointer-events: none; transition: opacity 0.3s;
+}
+@keyframes jcBadgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.jc-notif-badge.hidden { opacity: 0; }
+/* SPEECH BUBBLE TOOLTIP */
+.jc-tooltip {
+  position: fixed; bottom: 50px; right: 96px; z-index: 10000;
+  background: #1e1528; border: 1px solid rgba(255,179,198,0.25);
+  border-radius: 14px; padding: 0.55rem 1rem;
+  font-family: 'Nunito', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: #ffd6e0; white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 16px rgba(255,133,161,0.08);
+  opacity: 0; transform: translateX(10px);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.jc-tooltip.visible { opacity: 1; transform: translateX(0); }
+.jc-tooltip::after {
+  content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%) rotate(45deg);
+  width: 10px; height: 10px; background: #1e1528;
+  border-right: 1px solid rgba(255,179,198,0.25);
+  border-top: 1px solid rgba(255,179,198,0.25);
 }
 .joyce-chat-window {
   position: fixed; bottom: 100px; right: 28px; z-index: 9999;
@@ -919,11 +962,13 @@
 @media (max-width: 480px) {
   .joyce-chat-window { right: 12px; left: 12px; bottom: 90px; width: auto; max-height: 70vh; }
   .joyce-chat-toggle { bottom: 18px; right: 18px; }
+  .jc-tooltip { right: 86px; bottom: 40px; font-size: 0.72rem; }
 }
 </style>
 
 <div class="joyce-chat-widget">
   <button class="joyce-chat-toggle" id="jcToggle" aria-label="Chat with Joyce's AI assistant">
+    <span class="jc-notif-badge" id="jcBadge"></span>
     <svg class="jc-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffb3c6" stroke-width="1.8">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
       <circle cx="9" cy="12" r="0.7" fill="#ffb3c6"/><circle cx="12" cy="12" r="0.7" fill="#ffb3c6"/><circle cx="15" cy="12" r="0.7" fill="#ffb3c6"/>
@@ -932,6 +977,7 @@
       <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
     </svg>
   </button>
+  <div class="jc-tooltip" id="jcTooltip">✦ Ask me about Joyce! 🌸</div>
   <div class="joyce-chat-window" id="jcWindow">
     <div class="joyce-chat-header">
       <div class="joyce-chat-avatar">🌸</div>
@@ -973,6 +1019,20 @@
   const starters = document.getElementById('jcStarters');
   const limitBan = document.getElementById('jcLimit');
   const inputArea = document.getElementById('jcInputArea');
+  const badge = document.getElementById('jcBadge');
+  const tooltip = document.getElementById('jcTooltip');
+
+  let userHasOpened = false;
+
+  // ATTENTION SEQUENCE
+  // 1) Bounce in the button
+  setTimeout(() => { toggle.classList.add('bounce-in'); }, 300);
+  // 2) Show tooltip
+  setTimeout(() => { if (!userHasOpened) tooltip.classList.add('visible'); }, 2500);
+  // 3) Auto-open chat
+  setTimeout(() => { if (!userHasOpened) { chatWin.classList.add('visible'); toggle.classList.add('open'); } }, 5000);
+  // 4) Auto-close chat + hide tooltip
+  setTimeout(() => { if (!userHasOpened) { chatWin.classList.remove('visible'); toggle.classList.remove('open'); tooltip.classList.remove('visible'); } }, 9000);
 
   const knowledge = [
     { keys: ['study','studying','major','minor','degree','program','university','dalhousie','dal','school','academic'], responses: ["Joyce is a third-year BSc Co-op student at Dalhousie University in Halifax! 🎓 She's majoring in Mathematics (Applied Math Concentration) with a minor in Computer Science. She also received an Entrance Award with a Renewable Scholarship — super proud moment! ✦","Great question! Joyce studies at Dalhousie University 🎓 — she's doing a BSc Co-op with a major in Applied Mathematics and a minor in Computer Science. Currently in her third year and loving it! ✦"] },
@@ -1039,9 +1099,13 @@
   }
 
   toggle.addEventListener('click', () => {
+    userHasOpened = true;
     const isOpen = chatWin.classList.toggle('visible');
     toggle.classList.toggle('open', isOpen);
     if (isOpen) setTimeout(() => input.focus(), 350);
+    // Dismiss attention-grabbers on first click
+    badge.classList.add('hidden');
+    tooltip.classList.remove('visible');
   });
 
   function sendMessage(text) {
@@ -1085,7 +1149,7 @@
   });
 })();
 </script>
-<!-- END OF CHATBOT WIDGET -->
+<!-- END CHATBOT WIDGET -->
 
 </body>
 </html>
