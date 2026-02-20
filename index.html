@@ -1420,3 +1420,11 @@
   (function anim() {
     cX += (tX - cX) * 0.035;
     cY += (tY - cY) * 0.035;
+       world.style.transform = 'rotateX(' + cX + 'deg) rotateY(' + cY + 'deg)';
+    requestAnimationFrame(anim);
+  })();
+})();
+</script>
+
+</body>
+</html>
