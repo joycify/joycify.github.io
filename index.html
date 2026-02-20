@@ -290,7 +290,7 @@
 
   /* ── PROJECTS ── */
   #projects { background: var(--bg2); }
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; max-width: 1100px; }
+  .projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; max-width: 1300px; }
   .project-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 20px; padding: 2rem; position: relative;
@@ -640,6 +640,19 @@
   <div class="projects-grid">
 
     <div class="project-card">
+      <div class="project-emoji">🕯️</div>
+      <div class="project-num">Project 00</div>
+      <div class="project-title">The Focus Room</div>
+      <div class="project-desc">
+        Built this one for myself. A Pomodoro timer that keeps things simple: focus for a bit, break for a bit, repeat. Clean, minimal, and honestly kind of satisfying to use.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag pink">Productivity</span>
+      </div>
+      <a href="https://joycewong.net/focus" target="_blank" class="project-status live" style="text-decoration:none;">● Live</a>
+    </div>
+
+    <div class="project-card">
       <div class="project-emoji">🌦️</div>
       <div class="project-num">Project 01</div>
       <div class="project-title">Halifax Weather Analysis</div>
@@ -708,7 +721,7 @@
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a href="mailto:joyce.wong@dal.ca" class="contact-link">
+      <a href="/cdn-cgi/l/email-protection#42282d3b21276c352d2c250226232e6c2123" class="contact-link">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
         Email
       </a>
@@ -722,7 +735,7 @@
 </footer>
 
 <!-- YOUR ORIGINAL CURSOR SCRIPT (untouched) -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const cursor = document.getElementById('cursor');
   const ring   = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -1407,11 +1420,3 @@
   (function anim() {
     cX += (tX - cX) * 0.035;
     cY += (tY - cY) * 0.035;
-    world.style.transform = 'rotateX(' + cX + 'deg) rotateY(' + cY + 'deg)';
-    requestAnimationFrame(anim);
-  })();
-})();
-</script>
-
-</body>
-</html>
