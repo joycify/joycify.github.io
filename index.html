@@ -165,7 +165,7 @@
     opacity: 0; animation: floatUp 0.7s 1.2s forwards;
   }
   .domain-chip {
-    font-size: 0.75rem; font-weight: 600; padding: 0.4rem 1rem;
+    font-size: 0.82rem; font-weight: 600; padding: 0.55rem 1.35rem;
     border-radius: 20px; border: 1px solid rgba(255,179,198,0.2);
     color: var(--pink3); background: rgba(255,179,198,0.05); transition: all 0.2s;
   }
@@ -290,7 +290,7 @@
 
   /* ── PROJECTS ── */
   #projects { background: var(--bg2); }
-  .projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; max-width: 1300px; }
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 1300px; }
   .project-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 20px; padding: 2rem; position: relative;
@@ -369,6 +369,7 @@
     section { padding: 4rem 1.5rem; }
     #hero { padding: 7rem 1.5rem 3rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
     .hero-deco { display: none; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
@@ -407,7 +408,7 @@
     <h1 class="hero-name">Hello, I'm<em>Joyce Wong.</em></h1>
     <p class="hero-tagline"><strong>BSc Co-op Student @ Dalhousie University</strong> · Math, CS &amp; Physics</p>
     <p class="hero-desc">
-      Third-year student at Dalhousie University, with interests spanning climatology &amp; meteorology, machine learning, and cryptography &amp; cybersecurity. A versatile individual with experience across diverse roles, always on the lookout for new opportunities and ways to grow.
+      As I head into my fourth year at Dalhousie University, my interests span meteorology and machine learning. With advanced coursework and several internships across government and industry under my belt, I'm always on the lookout for new opportunities and ways to grow.
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="btn btn-pink">✦ See My Work</a>
@@ -415,9 +416,8 @@
       <a href="https://joycewong.net/focus" class="btn btn-ghost" target="_blank">🌿 Focus With Me</a>
     </div>
     <div class="hero-domains">
-      <span class="domain-chip">⛈️ Climatology &amp; Meteorology</span>
+      <span class="domain-chip">⛈️ Meteorology</span>
       <span class="domain-chip">🤖 Machine Learning</span>
-      <span class="domain-chip">🔐 Cryptography &amp; Cybersecurity</span>
     </div>
   </div>
 </section>
@@ -430,15 +430,15 @@
   <div class="about-grid">
     <div class="about-text">
       <p>
-        Welcome and thanks for stopping by! I'm Joyce Wong, in my third year at <strong>Dalhousie University</strong>, majoring in
+        Welcome and thanks for stopping by! I'm Joyce Wong, going into my fourth year at <strong>Dalhousie University</strong>, majoring in
         <strong>Mathematics (Applied Math Concentration)</strong> with minors in <strong>Computer Science</strong> and <strong>Physics</strong>.
         Keep scrolling and get to know more about me 👇
       </p>
     </div>
     <div class="about-cards">
-      <div class="about-card"><div class="about-card-icon">📐</div><div class="about-card-num">3rd yr</div><div class="about-card-label">At Dalhousie</div></div>
-      <div class="about-card"><div class="about-card-icon">💼</div><div class="about-card-num">3+</div><div class="about-card-label">Internships</div></div>
-      <div class="about-card"><div class="about-card-icon">🌿</div><div class="about-card-num">3</div><div class="about-card-label">Focus Areas</div></div>
+      <div class="about-card"><div class="about-card-icon">📐</div><div class="about-card-num">4th yr</div><div class="about-card-label">At Dalhousie</div></div>
+      <div class="about-card"><div class="about-card-icon">💼</div><div class="about-card-num">4+</div><div class="about-card-label">Internships</div></div>
+      <div class="about-card"><div class="about-card-icon">🌿</div><div class="about-card-num">2</div><div class="about-card-label">Focus Areas</div></div>
       <div class="about-card"><div class="about-card-icon">🌸</div><div class="about-card-num">∞</div><div class="about-card-label">Curiosity</div></div>
     </div>
   </div>
@@ -455,17 +455,25 @@
       <div class="tl-item future">
         <div class="tl-dot"></div>
         <div class="tl-badge incoming">✦ incoming</div>
-        <div class="tl-date">May 2026</div>
+        <div class="tl-date">Sept 2026</div>
+        <div class="tl-role">Research Assistant</div>
+        <div class="tl-org">Defence Research and Development Canada (DRDC) | Department of National Defence (DND)</div>
+        <div class="tl-desc">Excited for this part-time work throughout my coming school year!</div>
+      </div>
+
+      <div class="tl-item current">
+        <div class="tl-dot"></div>
+        <div class="tl-date">May 2026 – Present</div>
         <div class="tl-role">Climatology Assistant</div>
-        <div class="tl-org">Environment and Climate Change Canada (ECCC)</div>
-        <div class="tl-desc">Looking forward to getting hands-on with climate and meteorological data while making a meaningful impact!</div>
+        <div class="tl-org">Meteorological Service of Canada (MSC) | Environment and Climate Change Canada (ECCC)</div>
+        <div class="tl-desc">Developing and enhancing several Power BI dashboards that support the HAQFS team, plus hands-on work with Python, R, and meteorology and air quality data. This internship further affirms my career goal!</div>
       </div>
 
       <div class="tl-item current">
         <div class="tl-dot"></div>
         <div class="tl-date">Sept 2025 – Dec 2025</div>
         <div class="tl-role">Financial Data Analyst Intern</div>
-        <div class="tl-org">J.D. Irving, Limited (JDI)</div>
+        <div class="tl-org">Irving Business Services (IBS) | J.D. Irving, Limited (JDI)</div>
         <div class="tl-desc">Built several dashboards for analysis and handled large datasets with care.</div>
       </div>
 
@@ -543,11 +551,12 @@
       <div class="edu-school">Dalhousie University · Halifax, NS</div>
       <div class="edu-focus">
         BSc degree in progress. Making great connections and expanding my horizon across different perspectives. Relevant coursework:<br><br>
-        <strong style="color:var(--pink3);">[Mathematics]</strong> Cryptography (IP) · Calculus I, II, III · Data Mining with R · Matrix Theory &amp; Linear Algebra · Probability &amp; Statistics<br><br>
-        <strong style="color:var(--pink3);">[Computer Science]</strong> Data Structures and Algorithms (IP) · Discrete Mathematics · Information Security (IP) · Software Development<br><br>
+        <strong style="color:var(--pink3);">[Mathematics]</strong> Calculus I, II, III, IV (IP) · Matrix Theory &amp; Linear Algebra I, II (IP) · Probability &amp; Statistics · Data Mining with R · Differential Equations (IP) · Optimization (IP)<br><br>
+        <strong style="color:var(--pink3);">[Computer Science]</strong> Data Structures and Algorithms · Software Development · Information Security · Discrete Mathematics · Network Computing (IP)<br><br>
         <strong style="color:var(--pink3);">[Physics / Meteorology]</strong> Atmospheric Science (IP) · Atmospheric Physics (IP) · Synoptic Meteorology (IP) · Atmospheric Dynamics (IP)
       </div>
       <div class="edu-award">🏆 Entrance Award with Renewable Scholarship</div>
+      <div class="edu-award">🌦️ Environment and Climate Change Canada Meteorology Award Recipient</div>
     </div>
 
     <div class="edu-card">
@@ -563,19 +572,6 @@
       <div class="edu-award">🏅 Honors &amp; Principal's List Graduate</div>
     </div>
 
-    <div class="edu-card">
-      <div class="edu-icon">🗼</div>
-      <div class="edu-year">Summer 2024</div>
-      <div class="edu-degree">École de Langues · French Immersion Program</div>
-      <div class="edu-school">Université Laval · Québec City, QC</div>
-      <div class="edu-focus">
-        Spent the summer of 2024 fully immersed in French language and culture at
-        Université Laval. An enriching experience that
-        strengthened communication skills and broadened my cultural perspective.
-      </div>
-      <div class="edu-award">🌟 French A1 Level Completion</div>
-    </div>
-
   </div>
 </section>
 
@@ -589,9 +585,9 @@
       <div class="skill-group-icon">⌨️</div>
       <div class="skill-group-title">Programming Languages</div>
       <div class="skill-tags">
-        <span class="skill-tag">R</span>
-        <span class="skill-tag">Python</span>
         <span class="skill-tag">Java</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">R</span>
         <span class="skill-tag">SQL</span>
       </div>
     </div>
@@ -613,7 +609,6 @@
         <span class="skill-tag">Statistics</span>
         <span class="skill-tag">Calculus</span>
         <span class="skill-tag">Matrix &amp; Linear Algebra</span>
-        <span class="skill-tag">Cryptography</span>
         <span class="skill-tag">Data Mining</span>
       </div>
     </div>
@@ -662,7 +657,7 @@
       <div class="project-tags">
         <span class="project-tag">R</span>
         <span class="project-tag">Data Analysis</span>
-        <span class="project-tag pink">Climatology &amp; Meteorology</span>
+        <span class="project-tag pink">Meteorology</span>
       </div>
       <div class="project-status live">● Live</div>
     </div>
@@ -676,25 +671,10 @@
       </div>
       <div class="project-tags">
         <span class="project-tag">Python</span>
-        <span class="project-tag pink">Climatology &amp; Meteorology</span>
+        <span class="project-tag pink">Meteorology</span>
         <span class="project-tag pink">Machine Learning</span>
       </div>
       <div class="project-status wip">◐ In Progress</div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-emoji">🪙</div>
-      <div class="project-num">Project 03</div>
-      <div class="project-title">FileCoin Predictor</div>
-      <div class="project-desc">
-        A crypto-focused project exploring FileCoin's blockchain architecture and price behavior through historical on-chain and market data. Investigating how cryptographic protocols and network activity relate to token valuation and market trends over time.
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag pink">Machine Learning</span>
-        <span class="project-tag pink">Cryptography &amp; Cybersecurity</span>
-      </div>
-      <div class="project-status soon">✦ Coming Soon</div>
     </div>
 
   </div>
@@ -721,7 +701,7 @@
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a href="/cdn-cgi/l/email-protection#42282d3b21276c352d2c250226232e6c2123" class="contact-link">
+      <a href="mailto:joyce.wong@dal.ca" class="contact-link">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
         Email
       </a>
@@ -735,7 +715,7 @@
 </footer>
 
 <!-- YOUR ORIGINAL CURSOR SCRIPT (untouched) -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const cursor = document.getElementById('cursor');
   const ring   = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -1011,7 +991,7 @@
       <button class="jc-starter-btn" data-q="What projects has she worked on?">🌦️ What projects has she worked on?</button>
       <button class="jc-starter-btn" data-q="What are her interests?">⛈️ What are her interests?</button>
     </div>
-    <div class="jc-limit-banner" id="jcLimit">You've reached the message limit for this chat 🌸<br>Want to keep the conversation going? <a href="/cdn-cgi/l/email-protection#c1abaeb8a2a4efb6aeafa681a5a0adefa2a0">Email Joyce directly!</a></div>
+    <div class="jc-limit-banner" id="jcLimit">You've reached the message limit for this chat 🌸<br>Want to keep the conversation going? <a href="mailto:joyce.wong@dal.ca">Email Joyce directly!</a></div>
     <div class="jc-input-area" id="jcInputArea">
       <input type="text" class="jc-input" id="jcInput" placeholder="Ask about Joyce..." autocomplete="off"/>
       <button class="jc-send" id="jcSend" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
@@ -1020,7 +1000,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function() {
   const MAX_MESSAGES = 10;
   let msgCount = 0;
@@ -1049,41 +1029,39 @@
   setTimeout(() => { if (!userHasOpened) { chatWin.classList.remove('visible'); toggle.classList.remove('open'); tooltip.classList.remove('visible'); } }, 9000);
 
   const knowledge = [
-    { keys: ['study','studying','major','minor','degree','program','university','dalhousie','dal','school','academic'], responses: ["Joyce is a third-year BSc Co-op student at Dalhousie University in Halifax! \ud83c\udf93 She's majoring in Mathematics (Applied Math Concentration) with a minor in Computer Science. She also received an Entrance Award with a Renewable Scholarship \u2014 super proud moment! \u2726","Great question! Joyce studies at Dalhousie University \ud83c\udf93 \u2014 she's doing a BSc Co-op with a major in Applied Mathematics and a minor in Computer Science. Currently in her third year and loving it! \u2726"] },
-    { keys: ['course','coursework','class','classes','subject','taking'], responses: ["Joyce has taken some really cool courses! \ud83d\udcda On the math side: Cryptography, Calculus I\u2013III, Data Mining with R, Matrix Theory & Linear Algebra, and Probability & Statistics. For CS: Data Structures & Algorithms, Discrete Math, Information Security, and Software Development. She's also taking atmospheric science courses like Synoptic Meteorology and Atmospheric Dynamics! \u2726","She's got a packed schedule! \ud83d\udcda Math courses include Cryptography, Calculus, Linear Algebra, and Data Mining. CS courses include Data Structures, Discrete Math, and Info Security. Plus she's taking atmospheric science courses too \u2014 Synoptic Meteorology, Atmospheric Dynamics, and more! \u2726"] },
-    { keys: ['experience','work','job','intern','internship','career','employ','professional'], responses: ["Joyce has had a super diverse journey! \ud83d\udcbc She interned at Wood Mackenzie as a Data Analyst (Summer 2025), then at J.D. Irving as a Financial Data Analyst (Fall 2025) building dashboards. Before tech, she taught piano, tutored math, coordinated events, and even lifeguarded! Plus she's got an incoming role at Environment and Climate Change Canada starting May 2026 \ud83c\udf3f","Where do I even start! \ud83d\udcbc Joyce has done data analyst internships at Wood Mackenzie and J.D. Irving, taught private piano lessons, tutored math, coordinated events at ISMC Canada, and worked as a lifeguard for HRM. She's also got an exciting incoming position at ECCC for 2026! Talk about range \u2726"] },
-    { keys: ['eccc','environment canada','climate change canada','climatology assistant','incoming','future','next','upcoming','2026'], responses: ["Exciting news \u2014 Joyce has an incoming role as a Climatology Assistant at Environment and Climate Change Canada (ECCC) starting May 2026! \ud83c\udf3f She's really looking forward to getting hands-on with climate and meteorological data. \u2726","Joyce is joining Environment and Climate Change Canada as a Climatology Assistant in May 2026! \ud83c\udf3f It's a dream opportunity that combines her love for atmospheric science with real-world impact. She can't wait! \u2726"] },
-    { keys: ['irving','jdi','j.d. irving','financial data'], responses: ["At J.D. Irving (Fall 2025), Joyce worked as a Financial Data Analyst Intern! \ud83d\udcca She built several dashboards for analysis and worked with large datasets. A great experience combining her analytical skills with real business data! \u2726"] },
+    { keys: ['study','studying','major','minor','degree','program','university','dalhousie','dal','school','academic'], responses: ["Joyce is a BSc Co-op student at Dalhousie University in Halifax going into her fourth year! \ud83c\udf93 She's majoring in Mathematics (Applied Math Concentration) with a minor in Computer Science. She also received an Entrance Award with a Renewable Scholarship \u2014 super proud moment! \u2726","Great question! Joyce studies at Dalhousie University \ud83c\udf93 \u2014 she's doing a BSc Co-op with a major in Applied Mathematics and a minor in Computer Science. Going into her fourth year and loving it! \u2726"] },
+    { keys: ['course','coursework','class','classes','subject','taking'], responses: ["Joyce has taken some really cool courses! \ud83d\udcda On the math side: Calculus I\u2013IV, Matrix Theory & Linear Algebra I & II, Probability & Statistics, Data Mining with R, Differential Equations, and Optimization. For CS: Data Structures & Algorithms, Software Development, Information Security, Discrete Math, and Network Computing. She's also taking atmospheric science courses like Synoptic Meteorology and Atmospheric Dynamics! \u2726","She's got a packed schedule! \ud83d\udcda Math courses include Calculus, Linear Algebra, Differential Equations, Optimization, and Data Mining. CS courses include Data Structures, Software Development, Discrete Math, and Network Computing. Plus she's taking atmospheric science courses too \u2014 Synoptic Meteorology, Atmospheric Dynamics, and more! \u2726"] },
+    { keys: ['experience','work','job','intern','internship','career','employ','professional'], responses: ["Joyce has had a super diverse journey! \ud83d\udcbc She interned at Wood Mackenzie as a Data Analyst (Summer 2025), then at J.D. Irving as a Financial Data Analyst (Fall 2025) building dashboards. She's now a Climatology Assistant at Environment and Climate Change Canada, with an incoming part-time Research Assistant role at DRDC in September 2026. Before tech, she taught piano, tutored math, coordinated events, and even lifeguarded! \ud83c\udf3f","Where do I even start! \ud83d\udcbc Joyce has done data analyst internships at Wood Mackenzie and J.D. Irving, taught private piano lessons, tutored math, coordinated events at ISMC Canada, and worked as a lifeguard for HRM. Right now she's at Environment and Climate Change Canada as a Climatology Assistant, and she's joining DRDC part-time as a Research Assistant this September! Talk about range \u2726"] },
+    { keys: ['drdc','defence research','national defence','dnd','research assistant','incoming','future','next','upcoming','2026'], responses: ["Joyce has an incoming role as a Research Assistant at Defence Research and Development Canada (DRDC), part of the Department of National Defence (DND), starting September 2026! \ud83d\udee1\ufe0f It's a part-time research position she'll be doing alongside her classes. \u2726","Starting September 2026, Joyce joins Defence Research and Development Canada (DRDC) as a Research Assistant! \ud83d\udee1\ufe0f It's part-time work she'll carry through the coming school year, and she's excited for it. \u2726"] },
+    { keys: ['eccc','environment canada','climate change canada','climatology assistant','msc','meteorological service','haqfs'], responses: ["Joyce is currently a Climatology Assistant at the Meteorological Service of Canada (MSC), part of Environment and Climate Change Canada (ECCC)! \ud83c\udf3f She's developing and enhancing Power BI dashboards that support the HAQFS team, plus hands-on work with Python, R, and meteorology and air quality data. \u2726","Joyce started at Environment and Climate Change Canada in May 2026 as a Climatology Assistant with the Meteorological Service of Canada! \ud83c\udf3f She builds Power BI dashboards for the HAQFS team and works with meteorology and air quality data. She says it further affirms her career goal! \u2726"] },
+    { keys: ['irving','jdi','j.d. irving','ibs','irving business services','financial data'], responses: ["At Irving Business Services (IBS), part of J.D. Irving, Limited, Joyce worked as a Financial Data Analyst Intern in Fall 2025! \ud83d\udcca She built several dashboards for analysis and worked with large datasets. A great experience combining her analytical skills with real business data! \u2726"] },
     { keys: ['wood mackenzie','woodmac'], responses: ["Joyce interned at Wood Mackenzie in Summer 2025 as a Data Analyst! \ud83d\udcc8 It was her first technical internship where she gained real-world hands-on experience. A great stepping stone! \u2726"] },
-    { keys: ['project','built','build','portfolio','worked on','created'], responses: ["Joyce has some awesome projects! \ud83c\udf26\ufe0f Her Halifax Weather Analysis (live!) uses R to explore 2024 temperature patterns. She's building an ML Frost Forecasting System in Python to predict frost dates in Atlantic Canada. And coming soon \u2014 a FileCoin Predictor exploring blockchain price behavior! \u2726","Three cool projects to share! Her Halifax Weather Analysis is live and built with R. She's currently working on an ML Frost Forecasting System in Python. And coming up next is a FileCoin Predictor that blends crypto and machine learning! \ud83c\udf26\ufe0f\ud83e\uddca\ud83ea\ud83d\ude4a"] },
+    { keys: ['project','built','build','portfolio','worked on','created'], responses: ["Joyce has some awesome projects! \ud83c\udf26\ufe0f Her Halifax Weather Analysis (live!) uses R to explore 2024 temperature patterns. She's building an ML Frost Forecasting System in Python to predict frost dates in Atlantic Canada. She also built The Focus Room, a simple Pomodoro timer that's live now! \u2726","Three cool projects to share! Her Halifax Weather Analysis is live and built with R. She's currently working on an ML Frost Forecasting System in Python. And The Focus Room, her Pomodoro timer, is live too! \ud83c\udf26\ufe0f\ud83e\uddca\ud83d\udd6f\ufe0f"] },
     { keys: ['weather','halifax weather','temperature','climate data','weather analysis'], responses: ["Joyce's Halifax Weather Analysis project is live! \ud83c\udf26\ufe0f It's a statistical deep-dive into Halifax's 2024 temperature patterns and extreme weather events using Environment Canada data. Seasonal trends, daily variations, hot days, cold days \u2014 all built with R! \u2726"] },
-    { keys: ['frost','forecast','ml project','machine learning project','predict frost'], responses: ["The ML Frost Forecasting System is one of Joyce's current projects! \ud83e\uddca She's using Python and machine learning to predict first and last frost dates in Atlantic Canada from historical climate data. A cool blend of her climatology and ML interests! \u2726"] },
-    { keys: ['filecoin','crypto','blockchain','coin','token'], responses: ["Joyce has an upcoming project called the FileCoin Predictor! \ud83ea\ud83d\ude4a It'll explore FileCoin's blockchain architecture and price behavior through on-chain and market data \u2014 investigating how cryptographic protocols relate to token valuation. Coming soon! \u2726"] },
-    { keys: ['skill','tech','technology','tool','programming','language','code','coding','stack','toolkit'], responses: ["Joyce has a great toolkit! \u2328\ufe0f She codes in R, Python, Java, and SQL. For web she knows HTML, CSS, JavaScript, and Git. Math skills include probability, statistics, calculus, linear algebra, cryptography, and data mining. Tools: Power BI, Alteryx, RStudio, GitHub, VSCode, IntelliJ! \u2726","Her tech stack is solid! \u2328\ufe0f Programming: R, Python, Java, SQL. Web dev: HTML, CSS, JS, Git. She's also proficient with Power BI, Alteryx, RStudio, and various IDEs. Plus a deep mathematical foundation in stats, linear algebra, and cryptography! \u2726"] },
-    { keys: ['python'], responses: ["Yes! Joyce uses Python \ud83d\udc0d for her ML Frost Forecasting System and the upcoming FileCoin Predictor. It's one of her go-to languages for data and machine learning work! \u2726"] },
-    { keys: ['interest','passion','into','focus area','domain','passionate'], responses: ["Joyce has three main passions! \u26c8\ufe0f Climatology & Meteorology \u2014 she's fascinated by weather and climate systems. \ud83e\udd16 Machine Learning \u2014 she loves exploring how data makes predictions. \ud83d\udd10 Cryptography & Cybersecurity \u2014 the math behind security excites her. Such a cool combo! \u2726","Her three focus areas are really unique together! \u26c8\ufe0f Climatology & Meteorology, \ud83e\udd16 Machine Learning, and \ud83d\udd10 Cryptography & Cybersecurity. It's the intersection of these that makes Joyce's profile so interesting! \u2726"] },
-    { keys: ['meteorolog','weather interest','atmospheric','climate interest','climatolog'], responses: ["Joyce is super into climatology and meteorology! \u26c8\ufe0f She's taking courses in Atmospheric Science, Atmospheric Physics, Synoptic Meteorology, and Atmospheric Dynamics. Her incoming ECCC role and weather projects show just how passionate she is! \u2726"] },
-    { keys: ['cryptograph','security','cyber','encrypt','information security'], responses: ["Cryptography and cybersecurity are one of Joyce's key interests! \ud83d\udd10 She's taking courses in Cryptography and Information Security at Dalhousie. The mathematical side of security really fascinates her \u2014 it's where math meets CS perfectly! \u2726"] },
-    { keys: ['machine learning','ml','ai','artificial intelligence','deep learning'], responses: ["Joyce loves machine learning! \ud83e\udd16 She's applying it to real-world problems \u2014 her Frost Forecasting System uses ML to predict frost dates, and the FileCoin Predictor will use ML for price analysis. She combines it with her strong math foundation in statistics and linear algebra! \u2726"] },
+    { keys: ['frost','forecast','ml project','machine learning project','predict frost'], responses: ["The ML Frost Forecasting System is one of Joyce's current projects! \ud83e\uddca She's using Python and machine learning to predict first and last frost dates in Atlantic Canada from historical climate data. A cool blend of her meteorology and ML interests! \u2726"] },
+    { keys: ['skill','tech','technology','tool','programming','language','code','coding','stack','toolkit'], responses: ["Joyce has a great toolkit! \u2328\ufe0f She codes in Java, Python, R, and SQL. For web she knows HTML, CSS, JavaScript, and Git. Math skills include probability, statistics, calculus, linear algebra, and data mining. Tools: Power BI, Alteryx, RStudio, GitHub, VSCode, IntelliJ! \u2726","Her tech stack is solid! \u2328\ufe0f Programming: Java, Python, R, SQL. Web dev: HTML, CSS, JS, Git. She's also proficient with Power BI, Alteryx, RStudio, and various IDEs. Plus a deep mathematical foundation in stats, linear algebra, and data mining! \u2726"] },
+    { keys: ['python'], responses: ["Yes! Joyce uses Python \ud83d\udc0d for her ML Frost Forecasting System, and she works with it day to day at Environment and Climate Change Canada. It's one of her go-to languages for data and machine learning work! \u2726"] },
+    { keys: ['interest','passion','into','focus area','domain','passionate'], responses: ["Joyce has two main passions! \u26c8\ufe0f Meteorology \u2014 she's fascinated by weather and climate systems. \ud83e\udd16 Machine Learning \u2014 she loves exploring how data makes predictions. Such a cool combo! \u2726","Her two focus areas work really well together! \u26c8\ufe0f Meteorology and \ud83e\udd16 Machine Learning. It's the intersection of these that makes Joyce's profile so interesting! \u2726"] },
+    { keys: ['meteorolog','weather interest','atmospheric','climate interest','climatolog'], responses: ["Joyce is super into meteorology! \u26c8\ufe0f She's taking courses in Atmospheric Science, Atmospheric Physics, Synoptic Meteorology, and Atmospheric Dynamics. Her current ECCC role and weather projects show just how passionate she is! \u2726"] },
+    { keys: ['machine learning','ml','ai','artificial intelligence','deep learning'], responses: ["Joyce loves machine learning! \ud83e\udd16 She's applying it to real-world problems \u2014 her Frost Forecasting System uses ML to predict frost dates from historical climate data. She combines it with her strong math foundation in statistics and linear algebra! \u2726"] },
     { keys: ['piano','music','teach piano','instrument'], responses: ["Fun fact \u2014 Joyce is a pianist! \ud83c\udfb9 She taught private 1-on-1 piano lessons to students aged 6\u201314 from 2023 to 2025. It really built her patience, communication, and creative teaching skills. Such a talented person! \u2726"] },
     { keys: ['tutor','tutoring','math tutor','teaching'], responses: ["Joyce tutored middle and high school students in math from 2023 to 2025! \ud83d\udcd0 It reinforced her own foundations while helping others grow. Combined with her piano teaching, she's got amazing communication and mentoring skills! \u2726"] },
     { keys: ['contact','reach','email','connect','hire','message','talk to','get in touch'], responses: ["You can reach Joyce through several channels! \ud83d\udc8c Email: joyce.wong@dal.ca \u00b7 GitHub: github.com/joycify \u00b7 LinkedIn: linkedin.com/in/joyce-whw. She loves meeting new people, so don't hesitate! \ud83c\udf38","Joyce would love to hear from you! \ud83d\udc8c Drop her an email at joyce.wong@dal.ca, connect on LinkedIn at linkedin.com/in/joyce-whw, or check her GitHub at github.com/joycify! \ud83c\udf38"] },
     { keys: ['github','git','repo','repository'], responses: ["Find Joyce on GitHub at github.com/joycify! \ud83d\udcbb Check out her repos to see her projects and code. \u2726"] },
     { keys: ['linkedin'], responses: ["Joyce is on LinkedIn at linkedin.com/in/joyce-whw! \ud83d\udcbc She's always open to new connections \u2014 feel free to reach out! \ud83c\udf38"] },
-    { keys: ['french','laval','quebec','langue','immersion'], responses: ["Joyce spent a summer immersed in French language and culture at Universit\u00e9 Laval in Qu\u00e9bec City! \ud83d\uddfc It was a super enriching experience that broadened her cultural perspective. What a cool adventure! \u2726"] },
     { keys: ['high school','diploma','graduate','honor','principal','graduation'], responses: ["Joyce graduated high school in June 2023 with Honors and Principal's List distinction! \ud83c\udfeb She also received an Entrance Award from Dalhousie University with a Renewable Scholarship. Impressive! \u2726"] },
     { keys: ['lifeguard','swim','pool','hrm'], responses: ["Joyce worked as an Assistant Lifeguard for Halifax Regional Municipality during Summer 2023! \ud83c\udfca She ensured safety at an outdoor pool. Talk about a diverse resume! \u2726"] },
     { keys: ['event','coordinator','ismc','church','faith city'], responses: ["During Summer 2023, Joyce was an Event Coordinator at ISMC Canada and Faith City Church! \ud83c\udf89 She managed all event planning and administration from logistics to day-of coordination. \u2726"] },
-    { keys: ['who is','about joyce','tell me about','who are you','herself','introduce','bio','background','overview'], responses: ["Joyce Wong is a third-year BSc Co-op student at Dalhousie University in Halifax, majoring in Mathematics with a minor in Computer Science! \ud83c\udf38 She's passionate about climatology, machine learning, and cryptography. From lifeguarding to data analysis to teaching piano \u2014 she's always exploring new paths. She's got an exciting incoming role at Environment and Climate Change Canada too! \u2726","Meet Joyce! \ud83c\udf38 She's a math & CS student at Dalhousie University with a beautifully diverse background \u2014 data analyst, piano teacher, lifeguard, event coordinator, and more. Her passions lie at the intersection of climate science, ML, and cybersecurity. Currently in her third year and thriving! \u2726"] },
+    { keys: ['who is','about joyce','tell me about','who are you','herself','introduce','bio','background','overview'], responses: ["Joyce Wong is a BSc Co-op student at Dalhousie University in Halifax going into her fourth year, majoring in Mathematics with a minor in Computer Science! \ud83c\udf38 She's passionate about meteorology and machine learning. From lifeguarding to data analysis to teaching piano \u2014 she's always exploring new paths. She's currently a Climatology Assistant at Environment and Climate Change Canada too! \u2726","Meet Joyce! \ud83c\udf38 She's a math & CS student at Dalhousie University with a beautifully diverse background \u2014 data analyst, piano teacher, lifeguard, event coordinator, and more. Her passions lie at the intersection of climate science and machine learning. She's going into her fourth year and thriving! \u2726"] },
     { keys: ['hello','hey','hi','sup','howdy','good morning','good afternoon','good evening','hii','heyy'], responses: ["Hey there! \ud83c\udf38 So nice of you to say hi! I'm here to tell you all about Joyce \u2014 her journey, skills, projects, interests, you name it. What would you like to know? \u2726","Hi friend! \ud83d\udc9b Welcome to Joyce's corner. I'm her personal AI assistant and I'd love to chat about her work, studies, or anything else. What are you curious about? \u2726"] },
     { keys: ['thank','thanks','thx','ty','appreciate'], responses: ["Aww you're so welcome! \ud83d\udc9b If you have more questions about Joyce, I'm always here. Feel free to connect with her at joyce.wong@dal.ca! \ud83c\udf38","Happy to help! \ud83c\udf38 Don't hesitate to ask more or reach out to Joyce directly \u2014 she'd love to hear from you! \u2726"] },
     { keys: ['bye','goodbye','see ya','later','cya','gotta go','leaving'], responses: ["Thanks for stopping by! \ud83c\udf38 It was lovely chatting with you. Come back anytime! Have an amazing day \u2726\ud83d\udc9b","Bye bye! \ud83d\udc9b So glad you visited. Feel free to pop in anytime you want to learn more about Joyce. Take care! \ud83c\udf38"] },
-    { keys: ['fun fact','interesting fact','random','something cool','unique','special','surprise'], responses: ["Here's something cool! \ud83c\udf1f Joyce has taught piano to kids as young as 6, worked as a lifeguard, learned French in Qu\u00e9bec City, and is about to work with real climate data at ECCC \u2014 talk about range! \u2726","Fun fact: Joyce's interests span from atmospheric dynamics to blockchain cryptography! \ud83c\udf1f Plus she plays piano, speaks some French, and has lifeguarding skills. She's truly a renaissance woman! \u2726"] },
+    { keys: ['fun fact','interesting fact','random','something cool','unique','special','surprise'], responses: ["Here's something cool! \ud83c\udf1f Joyce has taught piano to kids as young as 6, worked as a lifeguard, tutored math, and now works with real climate data at ECCC \u2014 talk about range! \u2726","Fun fact: Joyce's interests span from atmospheric dynamics to machine learning! \ud83c\udf1f Plus she plays piano, tutors math, and has lifeguarding skills. She's truly a renaissance woman! \u2726"] },
     { keys: ['hobby','hobbies','free time','outside class','for fun'], responses: ["Beyond academics, Joyce plays piano and has had such diverse experiences \u2014 teaching music, tutoring math, lifeguarding, event planning! \ud83c\udfb9 Her curiosity really knows no bounds. She's someone who's always looking for new ways to grow! \u2726"] },
-    { keys: ['where','location','city','live','based','halifax','nova scotia','canada'], responses: ["Joyce is based in Halifax, Nova Scotia! \ud83c\udf0a She studies at Dalhousie University there. She also spent a summer in Qu\u00e9bec City for French immersion at Universit\u00e9 Laval. \u2726"] },
+    { keys: ['where','location','city','live','based','halifax','nova scotia','canada'], responses: ["Joyce is based in Halifax, Nova Scotia! \ud83c\udf0a She studies at Dalhousie University there, and she's currently working as a Climatology Assistant at Environment and Climate Change Canada. \u2726"] },
     { keys: ['data analyst','data analysis','power bi','alteryx','dashboard','dataset'], responses: ["Joyce has solid data analysis chops! \ud83d\udcca She interned at both Wood Mackenzie and J.D. Irving as a Data Analyst, building dashboards and wrangling large datasets. She's skilled in Power BI, Alteryx, R, Python, and SQL! \u2726"] },
-    { keys: ['math','mathematics','applied math','calculus','algebra','linear algebra','stats','statistics','probability'], responses: ["Math is at the core of everything Joyce does! \ud83d\udcd0 She's majoring in Applied Mathematics at Dalhousie. Coursework includes Calculus I\u2013III, Linear Algebra, Probability & Statistics, Cryptography, and Data Mining. She's got a beautiful mathematical mind! \u2726"] },
-    { keys: ['scholarship','award','achievement','accomplishment','recognition'], responses: ["Joyce has some wonderful achievements! \ud83c\udfc6 Entrance Award with Renewable Scholarship from Dalhousie, and graduated high school with Honors and Principal's List. She also spent a summer doing French immersion at Universit\u00e9 Laval in Qu\u00e9bec City! \u2726"] },
+    { keys: ['math','mathematics','applied math','calculus','algebra','linear algebra','stats','statistics','probability'], responses: ["Math is at the core of everything Joyce does! \ud83d\udcd0 She's majoring in Applied Mathematics at Dalhousie. Coursework includes Calculus I\u2013IV, Linear Algebra, Probability & Statistics, Differential Equations, Optimization, and Data Mining. She's got a beautiful mathematical mind! \u2726"] },
+    { keys: ['scholarship','award','achievement','accomplishment','recognition'], responses: ["Joyce has some wonderful achievements! \ud83c\udfc6 Entrance Award with Renewable Scholarship from Dalhousie, the Environment and Climate Change Canada Meteorology Award, and she graduated high school with Honors and Principal's List. \u2726"] },
     { keys: ['r studio','rstudio','r language','r programming'], responses: ["Joyce uses R and RStudio extensively! \ud83d\udcca Her Halifax Weather Analysis was built with R, and she's taken a Data Mining with R course. It's one of her core analytical tools! \u2726"] },
     { keys: ['java'], responses: ["Yes! Joyce codes in Java \u2615 and uses IntelliJ as her development environment. It's part of her well-rounded programming skill set! \u2726"] },
     { keys: ['sql','database','query'], responses: ["Joyce works with SQL as part of her data toolkit! \ud83d\uddc4\ufe0f Combined with Power BI and Alteryx, she's well-equipped for data management and analysis. \u2726"] },
